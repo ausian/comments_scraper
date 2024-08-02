@@ -1,0 +1,72 @@
+:root {
+  --color-bg: #2C2C2C;
+  --color-elem-border: #444444;
+  --color-font: white;
+  --color-elem: #383838;
+  --color-font-hold: #888685;
+}
+
+input::placeholder {
+  color: var(--color-font-hold) !important;
+}
+
+.ant-empty-description {
+  color: var(--color-font) !important;
+}
+
+/* Стилизация для WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Стилизация для Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-elem) var(--color-bg);
+}
+
+/* Стилизация для Edge, IE, и других браузеров */
+body {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+
+
+body {
+  padding: 0;
+  margin: 0;
+  color: var(--color-font)
+}
+
+.layout {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 2fr 4fr;
+  background: var(--color-bg);
+}
+
+
+.listContainer .ant-list-item {
+  border-bottom: 1px solid var(--color-elem-border) !important; /* Здесь вы можете задать любой стиль для разделительной линии */
+}
+.sectionSubConteiner {
+  height: 100vh;
+  overflow-y: scroll;
+}
